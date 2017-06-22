@@ -23,7 +23,7 @@ $(call inherit-product, device/asus/duma/device.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := duma
-PRODUCT_NAME := full_duma
+PRODUCT_NAME := aosp_duma
 PRODUCT_BRAND := Asus
 PRODUCT_MODEL := ME302KL
 PRODUCT_MANUFACTURER := Asus
