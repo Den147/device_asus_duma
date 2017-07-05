@@ -1,5 +1,5 @@
-#
-# Copyright 2016 Nitrogen Project
+# Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2016 The AOKP Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,15 +14,15 @@
 # limitations under the License.
 #
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1200
-TARGET_SCREEN_WIDTH := 1920
-
-# Inherit some common Nitrogen OS stuff.
+# Inherit some common Nitrogen stuff. 
 $(call inherit-product, vendor/nitrogen/products/common.mk)
 
-# Inherit device configuration
-$(call inherit-product, device/asus/duma/full_duma.mk)
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
+# Inherit from hardware-specific part of the product configuration
+$(call inherit-product, device/asus/duma/device.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := duma
@@ -30,3 +30,4 @@ PRODUCT_NAME := nitrogen_duma
 PRODUCT_BRAND := Asus
 PRODUCT_MODEL := ME302KL
 PRODUCT_MANUFACTURER := Asus
+
